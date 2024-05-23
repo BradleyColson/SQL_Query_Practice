@@ -333,33 +333,25 @@ Exploratory data analysis of data from a bank in Portugal.
 
 ![job](https://github.com/BradleyColson/SQL_Query_Practice/assets/132014177/04b6e91e-6b52-4892-af30-ea8171bc3f66)
 
-Unknown isn’t too high here.
+
+![balance](https://github.com/BradleyColson/SQL_Query_Practice/assets/132014177/0bc217d5-6278-46ed-9408-3751ec1de176)
 
 
-Unclear why student balances are so high compared to other jobs. I’d have to get this clarified to see if it’s accurate.
+![married](https://github.com/BradleyColson/SQL_Query_Practice/assets/132014177/eb796a61-53ed-4232-a0ac-4092e9aad8fb)
 
 
-The married ratio seems logical.
+![loan](https://github.com/BradleyColson/SQL_Query_Practice/assets/132014177/b8568ae0-c1b2-4ec6-97f7-9c6b7aced0ae)
 
-
-Yes for housing loan makes sense here.
-
-
-No personal loan may be low here. 
-
-
-Of all the exploratory questions so far, this one is the most concerning.
+ 
+![contact](https://github.com/BradleyColson/SQL_Query_Practice/assets/132014177/8fc08d3c-48b4-4961-997e-c6635623e212)
 
 Are cellular and telephone different? Does telephone mean land line?
 Why are there so many unknown contacts?
 
+![default](https://github.com/BradleyColson/SQL_Query_Practice/assets/132014177/ea1819fc-f9e0-4168-b9ab-1ce75be93f19)
 
 
-The no for term deposits seems really low.  This is likely concerning. I’d advise marketing about this.
-
-
-
-The high count of housing default is alarming.
+![dc](https://github.com/BradleyColson/SQL_Query_Practice/assets/132014177/dbe559ef-98c0-4ca0-b509-610a52048d04)
 
 
 The personal loan default count looks much better for the bank.
