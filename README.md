@@ -320,3 +320,46 @@ DROP COLUMN row_num;
 SELECT *
 FROM layoffs_staging2
 
+
+
+********************************************************************************
+
+
+
+Exploratory data analysis of data from a bank in Portugal.
+
+
+
+
+
+Unknown isn’t too high here.
+
+
+Unclear why student balances are so high compared to other jobs. I’d have to get this clarified to see if it’s accurate.
+
+
+The married ratio seems logical.
+
+
+Yes for housing loan makes sense here.
+
+
+No personal loan may be low here. 
+
+
+Of all the exploratory questions so far, this one is the most concerning.
+
+Are cellular and telephone different? Does telephone mean land line?
+Why are there so many unknown contacts?
+
+
+
+The no for term deposits seems really low.  This is likely concerning. I’d advise marketing about this.
+
+
+
+The high count of housing default is alarming.
+
+
+The personal loan default count looks much better for the bank.
+
