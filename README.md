@@ -1,6 +1,9 @@
 # Apple Store SQL Stakeholder project
 
-The Apple Store Word doc is a set of sql queries about apps in the Apple Store.  It answers imaginary stake holder questions.
+The Apple Store Word doc is a set of sql queries about apps in the Apple Store. 
+
+It answers imaginary stake holder questions.
+
 
 create TABLE AppleStore_description_combined AS
 
@@ -92,11 +95,11 @@ SELECT CASE
  --Is there any correlation between app rating and length of the description in AppleStore?
  
  SELECT CASE
- 			when length(b.app_desc) < 500 then 'Short'
-            when length(b.app_desc) between 500 and 1000 then 'Medium'
- 			ELSE 'Long'
-        end as descrition_length_bucket,
-        avg(a.user_rating) as Average_Rating
+ 	when length(b.app_desc) < 500 then 'Short'
+	when length(b.app_desc) between 500 and 1000 then 'Medium'
+ 	ELSE 'Long'
+	end as descrition_length_bucket,
+	avg(a.user_rating) as Average_Rating
  from AppleStore as A
  Join AppleStore_description_combined as B
  	ON A.id=B.id
@@ -108,7 +111,7 @@ order by Average_Rating desc
 SELECT	
 	prime_genre,
 	track_name,
-    user_rating
+	user_rating
 from (
   	SELECT	
   		prime_genre,
