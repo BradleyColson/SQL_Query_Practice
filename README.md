@@ -1,4 +1,4 @@
-
+# Apple Store SQL Stakeholder project
 
 The Apple Store Word doc is a set of sql queries about apps in the Apple Store.  It answers imaginary stake holder questions.
 
@@ -18,6 +18,7 @@ UNION all
 
 SELECT * FROM appleStore_description4
 
+
 --Check the number of unique apps in tables in the AppleStore.
 
 SELECT count(DISTINCT id) AS UniqueAppIDs
@@ -25,6 +26,7 @@ FROM AppleStore
 
 SELECT count(DISTINCT id) AS UniqueAppIDs
 FROM AppleStore_description_combined
+
 
 --check for missing values
 
@@ -36,12 +38,14 @@ SELECT COUNT(*) as MissingValues
 FROM AppleStore_description_combined
 where app_desc IS null
 
+
 --Find number of apps per genre.
 
 SELECT prime_genre, count(*) as NumApps
 from AppleStore
 group by prime_genre
 order by NumApps DESC
+
 
 --Get an overview of app ratings
 
@@ -50,6 +54,7 @@ SELECT
 	max(user_rating) as MaxRating,
     avg(user_rating) as AvgRating
 FROM AppleStore
+
 
 --Determine whether paid apps have higher ratings than free apps in the AppleStore.
 
@@ -61,6 +66,7 @@ SELECT CASE
 FROM AppleStore
 GROUP by App_Type
 
+
 --Determine if apps with more languages have higher ratings?
 SELECT CASE	
 		when lang_num < 10 then '<10 languages'
@@ -71,6 +77,7 @@ SELECT CASE
  from AppleStore
  group BY Language_Bucket
  order by Avg_Rating desc
+
  
  -- Which genres have the lowest ratings?
  
@@ -80,6 +87,7 @@ SELECT CASE
  group by prime_genre
  order by Avg_Rating aSC
  limit 10
+
  
  --Is there any correlation between app rating and length of the description in AppleStore?
  
@@ -94,6 +102,7 @@ SELECT CASE
  	ON A.id=B.id
 group by descrition_length_bucket
 order by Average_Rating desc
+
 
 -- What are the top rated apps for each genre?
 SELECT	
@@ -112,9 +121,11 @@ WHERE a.rank= 1
         
 ***************************************************************************************************
 
-Used layoff data set with errors.  This is the typical sql quering I used to clean the data.  This is a code along practice with Alex the Analyst.
+# SQL Data CLeaning
 
-Cleaned it up using exploration of issues and errors.
+## Cleaned layoff data set
+
+### Cleaned it up using exploration of issues and errors.
 
 -- Data Cleaning Project
 
@@ -123,7 +134,7 @@ Cleaned it up using exploration of issues and errors.
 -- 3. Null or blank values
 -- 4. Remove any extra columns you created temporarily
 
--- Create staging table to avoid overriting the raw data
+-- Create a copy called staging table to avoid overriting the original raw data
 
 CREATE TABLE layoffs_staging
 LIKE layoffs;
